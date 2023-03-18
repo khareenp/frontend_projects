@@ -1,0 +1,2 @@
+Step 1: Break the UI into a component hierarchy 
+2.
