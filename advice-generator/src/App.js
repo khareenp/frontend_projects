@@ -31,7 +31,7 @@ export default function App() {
         <p className=" text-2xl">"{advice.advice}"</p>
         <img src={divider} alt="divider" className="mb-6"></img>
         <button
-          className="border-0 border-solid rounded-full absolute bg-green-500 p-5 mt-60"
+          className="border-0 border-solid rounded-full absolute bg-green-500 p-5 mt-40"
           onClick={getAdvice}
         >
           <img src={dice} alt="x" className=" h-8 w-8"></img>
