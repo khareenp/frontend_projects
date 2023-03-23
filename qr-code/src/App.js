@@ -93,6 +93,7 @@ export default function App() {
             {data.first_name} {data.last_name}
           </p>
           <p className="px-4 text-slate-400 text-xs ">{data.gender}</p>
+          <p className="px-4 text-slate-400 text-xs ">{data.email}</p>
         </div>
       ))}
     </div>

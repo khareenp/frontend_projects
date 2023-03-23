@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import NavBar from "../navbar/NavBar";
+import Search from "../searchbox/Search";
 
 export default function Home() {
   const [countries, setCountries] = useState([]);
@@ -19,6 +21,11 @@ export default function Home() {
 
   return (
     <div className="screen h-full w-full bg-slate-100">
+      <NavBar />
+      <div className="m-4">
+        {" "}
+        <Search />
+      </div>
       <div className="grid grid-cols-5">
         {countries.map(() => (
           <div className="country_card flex flex-col m-6 border-solid bg-white w-60 shadow-lg rounded-md">
