@@ -1,9 +1,5 @@
 import Home from "./components/homescreen/Home";
-import NavBar from "./components/navbar/NavBar";
+import Random from "./screens/Random";
 export default function App() {
-  return (
-    <div>
-      <Home />
-    </div>
-  );
+  return <>{true ? <Home /> : <Random />}</>;
 }
