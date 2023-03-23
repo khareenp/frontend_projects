@@ -24,14 +24,16 @@ export default function App() {
   }, []);
 
   return (
-    <div className="screen h-full w-full bg-slate-50">
-      <div className="country_card flex flex-col border-solid border-2 border-gray-300 w-2/12">
-        <img src={flag} alt="flag"></img>
-        <p>{officialName}</p>
-        <p>Population: {population}</p>
-        <p>Region: {region}</p>
-        <p>Capital {capital}</p>
-      </div>
+    <div className="screen h-full w-full bg-slate-100">
+      {countries.map(() => (
+        <div className="country_card flex flex-col m-6 border-solid bg-white w-60 shadow-lg rounded-md">
+          <img src={flag} alt="flag" className=" rounded-t-md"></img>
+          <p>{officialName}</p>
+          <p>Population: {population}</p>
+          <p>Region: {region}</p>
+          <p>Capital {capital}</p>
+        </div>
+      ))}
     </div>
   );
 }
