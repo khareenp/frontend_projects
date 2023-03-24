@@ -4,32 +4,39 @@ import Layout from "../layout/Layout";
 import Search from "../searchbox/Search";
 import Filter from "../filter/Filter";
 import CountryCard from "../country-card/CountryCard";
+import { useFetch } from "../../helpers/useFetch";
 
 export default function Home() {
-  const [countries, setCountries] = useState([]);
-  //let flag = response.flags.png;
-  //console.log(flag);
+  // const [countries, setCountries] = useState([]);
+  const [urlParam, setParam] = useState("all");
+  const { data: countries } = useFetch(urlParam);
 
-  async function getCountries() {
-    try {
-      const response = await axios.get("https://restcountries.com/v3.1/all");
-      setCountries(response.data);
-      console.log(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  }
+  // async function getCountries() {
+  //   try {
+  //     const response = await axios.get(
+  //       `https://restcountries.com/v3.1/${urlParam}`
+  //     );
+  //     setCountries(response.data);
+  //     console.log(response.data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }
 
-  useEffect(() => {
-    getCountries();
-  }, []);
+  // useEffect(() => {
+  //   getCountries();
+  // }, [urlParam]);
+
+  const handleChange = (region) => {
+    setParam(`region/${region}`);
+  };
 
   return (
     <Layout>
       <div className=" max-w-screen-2xl mx-auto">
         <div className="flex items-center justify-between py-12">
           <Search />
-          <Filter />
+          <Filter handleChange={handleChange} />
         </div>
         <div className="grid grid-cols-4 gap-10">
           {countries.map((country) => (
