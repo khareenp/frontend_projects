@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CountryCard({ country }) {
   return (
-    <div className="flex flex-col h-96 bg-slate-50 shadow-md rounded-md">
+    <div className="flex flex-col h-96 bg-slate-50 shadow-lg rounded-md">
       <div className="h-1/2 flex items-center justify-center">
         <img
           src={country.flags.png}

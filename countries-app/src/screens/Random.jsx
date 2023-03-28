@@ -3,7 +3,7 @@ import Layout from "../components/layout/Layout";
 import { useFetch } from "../helpers/useFetch";
 
 export default function Random() {
-  const { data: response } = useFetch("name/Brazil");
+  const { data: response } = useFetch("name");
   const country = response[0];
   console.log(response, country);
   return (
