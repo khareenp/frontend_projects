@@ -26,7 +26,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className="fixed flex w-full h-20 px-6 justify-between items-center bg-[#0a192f] text-gray-300">
+    <div className="fixed flex w-full h-20 px-6 justify-between items-center bg-black text-gray-300">
       <h1 className="text-4xl font-signature ">KFP</h1>
       <ul className="hidden md:flex">
         {links.map(({ id, link }) => (
